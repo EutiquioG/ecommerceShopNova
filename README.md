@@ -72,7 +72,7 @@ ecommerce-laravel
 ## 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/ecommerce-laravel.git
+$ git remote add origin https://github.com/EutiquioG/ecommerceShopNova.git
 ```
 
 Entrar al proyecto:
