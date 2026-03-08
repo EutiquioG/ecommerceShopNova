@@ -1,66 +1,251 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 Ecommerce Laravel
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyecto de **tienda online desarrollado con Laravel**, donde los usuarios pueden visualizar productos, agregarlos al carrito de compras y administrar un catálogo de productos con imágenes y precios.
 
-## About Laravel
+Este proyecto fue desarrollado con fines **educativos y de aprendizaje**, aplicando buenas prácticas de desarrollo web con **Laravel, Blade y MySQL**.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# 🚀 Características del proyecto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* 📦 Listado de productos
+* 🖼 Visualización de productos con imágenes
+* 🛒 Agregar productos al carrito
+* ✏ Crear productos
+* 🔄 Actualizar productos
+* ❌ Eliminar productos
+* 💰 Precios en pesos colombianos
+* 🎨 Diseño moderno con tarjetas de productos
+* 📱 Interfaz adaptable (responsive)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# 🛠 Tecnologías utilizadas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Este proyecto fue desarrollado con las siguientes tecnologías:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **PHP**
+* **Laravel**
+* **Blade (motor de plantillas)**
+* **MySQL**
+* **HTML5**
+* **CSS3**
+* **JavaScript**
+* **Git**
+* **GitHub**
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+# 📂 Estructura del proyecto
 
-### Premium Partners
+```
+ecommerce-laravel
+│
+├── app
+│   └── Http
+│       └── Controllers
+│
+├── database
+│   └── migrations
+│
+├── public
+│   └── css
+│
+├── resources
+│   └── views
+│       ├── products
+│       ├── cart
+│       └── layouts
+│
+├── routes
+│   └── web.php
+│
+├── README.md
+├── composer.json
+└── .env
+```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+---
 
-## Contributing
+# ⚙️ Instalación del proyecto
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 1️⃣ Clonar el repositorio
 
-## Code of Conduct
+```bash
+git clone https://github.com/TU-USUARIO/ecommerce-laravel.git
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Entrar al proyecto:
 
-## Security Vulnerabilities
+```bash
+cd ecommerce-laravel
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 2️⃣ Instalar dependencias
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+composer install
+```
+
+---
+
+## 3️⃣ Crear archivo de entorno
+
+```bash
+cp .env.example .env
+```
+
+---
+
+## 4️⃣ Generar clave de Laravel
+
+```bash
+php artisan key:generate
+```
+
+---
+
+## 5️⃣ Configurar base de datos
+
+En el archivo `.env` configurar:
+
+```
+DB_DATABASE=ecommerce
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+## 6️⃣ Ejecutar migraciones
+
+```bash
+php artisan migrate
+```
+
+---
+
+## 7️⃣ Ejecutar el servidor
+
+```bash
+php artisan serve
+```
+
+El proyecto estará disponible en:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+# 🛍 Productos del sistema
+
+El sistema incluye productos como:
+
+* Laptop Gamer ASUS
+* Mouse Gamer RGB
+* Teclado Mecánico
+* Monitor 27 Pulgadas
+* Auriculares Gamer
+* Silla Gamer
+* Disco SSD 1TB
+* Webcam HD
+* Tablet Android
+* Smartphone Pro
+
+Cada producto incluye:
+
+* Nombre
+* Descripción
+* Precio
+* Imagen
+
+---
+
+# 🖼 Funcionalidades principales
+
+### 📦 Gestión de productos
+
+Permite:
+
+* Crear productos
+* Editar productos
+* Eliminar productos
+* Visualizar catálogo
+
+---
+
+### 🛒 Carrito de compras
+
+Los usuarios pueden:
+
+* Agregar productos
+* Visualizar el carrito
+* Ver el total de compra
+
+---
+
+# 🎨 Diseño
+
+El proyecto utiliza un diseño basado en **cards de productos**, similar a tiendas online modernas como:
+
+* Amazon
+* MercadoLibre
+* Shopify
+
+Características visuales:
+
+* Tarjetas de producto
+* Imágenes dinámicas
+* Botones interactivos
+* Diseño limpio y moderno
+
+---
+
+# 📸 Capturas del proyecto
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+Listado de productos con imágenes y precios.
+ 
+ ### Login y Registro
+ ![alt text](image-4.png)
+ ![alt text](image-5.png)
+
+### Carrito de compras
+![alt text](image-6.png)
+![alt text](image-7.png)
+
+# Panel Administrador
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+
+
+# 👨‍💻 Autor
+
+Proyecto desarrollado por: Eutiquio Gonzalez Leivaz
+Desarrollador Web
+Proyecto académico de práctica con Laravel.
+
+---
+
+# 📚 Objetivo del proyecto
+
+El objetivo de este proyecto es practicar:
+
+* Desarrollo con **Laravel**
+* Manejo de **CRUD**
+* Uso de **Blade Templates**
+* Integración con **MySQL**
+* Uso de **Git y GitHub**
+
+---
+
+# 📄 Licencia
+
+Este proyecto es de **uso educativo y académico**.
