@@ -7,10 +7,6 @@
     <div class="hero-text">
         <h1>Bienvenido a ShopNova</h1>
         <p>Descubre productos increíbles con los mejores precios online.</p>
-
-        <a href="/products" class="btn-shop">
-            Comprar ahora
-        </a>
     </div>
 
 </div>
@@ -57,7 +53,7 @@
 
 <div class="card">
 
-<img src="{{ $product->image }}" alt="{{ $product->name }}">
+<img src="{{ asset('storage/' . $product->image) }}" width="200">
 
 <h3>{{ $product->name }}</h3>
 

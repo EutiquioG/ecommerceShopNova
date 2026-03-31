@@ -17,6 +17,7 @@
 <nav class="navbar">
 
 <a href="/">ShopNova</a>
+
 <div>
 
 @guest
@@ -29,8 +30,17 @@
 
 @auth
 
-
 <span>{{ auth()->user()->name }}</span>
+
+{{-- 👑 BOTÓN PANEL ADMIN --}}
+@auth
+    @if(auth()->user()->role === 'admin')
+        <a href="{{ route('admin.products') }}" class="btn-admin">
+            👑 Panel Admin
+        </a>
+    @endif
+@endauth
+
 <a href="#" onclick="openCart()">
 🛒 Carrito
 
@@ -159,6 +169,7 @@ Crear cuenta
 
 <form action="{{ route('cart.remove',$id) }}" method="POST">
 @csrf
+@method('DELETE')
 
 <button style="
 background:#ff4757;
@@ -178,6 +189,8 @@ Eliminar
 </div>
 
 <hr>
+
+@php $total += $product['price'] * $product['quantity'] @endphp
 
 @endforeach
 
@@ -230,6 +243,7 @@ Eliminar
 </div>
 
 </footer>
+
 <script src="{{ asset('js/app.js') }}"></script>
 
 </body>

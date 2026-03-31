@@ -2,43 +2,56 @@
 
 @section('content')
 
-<div class="form-container">
+@auth
+    @if(auth()->user()->role === 'admin')
 
-<div class="form-card">
+    <div class="form-container">
 
-<h2>Agregar Producto</h2>
+        <div class="form-card">
 
-<form action="{{ route('products.store') }}" method="POST">
-@csrf
+            <h2>Agregar Producto</h2>
 
-<div class="form-group">
-<label>Nombre del producto</label>
-<input type="text" name="name" required>
-</div>
+            <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
 
-<div class="form-group">
-<label>Precio</label>
-<input type="number" name="price" step="0.01" required>
-</div>
+                <div class="form-group">
+                    <label>Nombre del producto</label>
+                    <input type="text" name="name" required>
+                </div>
 
-<div class="form-group">
-<label>Descripción</label>
-<textarea name="description"></textarea>
-</div>
+                <div class="form-group">
+                    <label>Precio</label>
+                    <input type="number" name="price" step="0.01" required>
+                </div>
 
-<div class="form-group">
-<label>Imagen (URL)</label>
-<input type="text" name="image">
-</div>
+                <div class="form-group">
+                    <label>Stock</label>
+                    <input type="number" name="stock" min="0" required>
+                </div>
 
-<button class="btn-save">
-Guardar Producto
-</button>
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <textarea name="description"></textarea>
+                </div>
 
-</form>
+                <div class="form-group">
+                    <label>Imagen del producto</label>
+                    <input type="file" name="image" accept="image/*">
+                </div>
 
-</div>
+                <button class="btn-save">Guardar Producto</button>
 
-</div>
+            </form>
+
+        </div>
+
+    </div>
+
+    @else
+        <div style="text-align:center; margin-top:50px;">
+            <h3>No tienes permisos para acceder aquí ❌</h3>
+        </div>
+    @endif
+@endauth
 
 @endsection

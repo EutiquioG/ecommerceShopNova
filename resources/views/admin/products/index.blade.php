@@ -105,7 +105,7 @@ tr:hover{
 <div class="admin-container">
 
     <div class="admin-header">
-        <h2>👑 Panel Administradorijkjlkj</h2>
+        <h2>👑 Panel Administrador</h2>
 
         <a href="{{ route('products.create') }}" class="btn btn-primary">
             + Nuevo Producto
